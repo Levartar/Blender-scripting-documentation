@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../Using%20command%20line%20arguments/">
+        <link rel="prev" href="../File%20Structure/">
       
       
-        <link rel="next" href="../File%20Structure/">
+        <link rel="next" href="../../Plannings/Kennzeichen-Konfigurator/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Render Settings - W&S Elferplatz Combinations rendering Documentation</title>
+        <title>Environment Rendering - W&S Elferplatz Combinations rendering Documentation</title>
       
     
     
@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#implementation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Render Settings
+              Environment Rendering
             
           </span>
         </div>
@@ -340,17 +345,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Render%20Settings/" class="md-nav__link">
         
   
   
@@ -361,7 +359,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -417,10 +414,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Environment%20Rendering/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Environment Rendering
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -431,6 +448,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -529,6 +573,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -543,37 +604,115 @@
 
 
 
-  <h1>Render Settings</h1>
+  <h1>Environment Rendering</h1>
 
-<pre><code class="language-Python">RENDER_RESOLUTION_X = 2560
-RENDER_RESOLUTION_Y = 1440
-RENDER_RESOLUTION_PERCENTAGE = 100
+<ul>
+<li>Background should contain detailed 3D scene</li>
+<li>Background should be interchangeable</li>
+<li>Only 1 Camera perspective</li>
+</ul>
+<h2 id="implementation">Implementation</h2>
+<ul>
+<li>LInk Environemts into 964_ext.blend file</li>
+<li>Geometry node switch for different environments </li>
+<li>Compositor for Environment on new Scene layer </li>
+<li>5 Cameras for different sweet spot photos</li>
+<li>
+<p>setup car rotation based on different sweet spot cameras </p>
+<ul>
+<li><code>[Cam1: 0°, Cam2: 45°...]</code></li>
+</ul>
+</li>
+<li>
+<p>Code create new CFS for environment Geometry node switch</p>
+</li>
+<li>Create render environment sister function (called out of main render function)</li>
+</ul>
+<pre><code class="language-PYthon"># Environment
 
-CYLCES_ADAPTIVE_THRESHOLD = 0.025
-CYLCES_SAMPLES = 512
+def Environment():
 
-# PreRender Settings
-PRE_RENDER_RENDER_RESOLTION_PERCENTAGE = 50
-PRE_RENDER_CYLCES_ADAPTIVE_THRESHOLD = 0.5
-PRE_RENDER_CYLCES_SAMPLES = 1
+bpy.data.objects[&quot;Car_Instancer_Base&quot;].modifiers[&quot;GeometryNodes&quot;][&quot;Socket_4&quot;] = 0
 
-#If True, the script will only output the paths to the images and count the renderings
+configurations = [
+CFS[&quot;Bodykits&quot;],
+CFS[&quot;FelgenFull&quot;],
+CFS[&quot;Distanzscheiben&quot;],
+CFS[&quot;Distanzscheiben&quot;],
+CFS[&quot;BGColorComp&quot;],
+]
 
-# If False, the script will render the images
-TEST_MODE = (
-False # Nur die Pfade zu den Bildern ausgeben und die Renderings zählen
+
+
+slot_mapping = {
+
+&quot;bodykit&quot;: 0, # Bodykits
+
+&quot;felge&quot;: 1, # FelgenFull
+
+&quot;distanzscheibeV&quot;: 2, # Distanzscheiben
+
+&quot;distanzscheibeH&quot;: 2, # Distanzscheiben
+
+&quot;hintergrund&quot;: 3, # CompositorHintergrund
+
+}
+
+
+
+render_scene_with_config(
+
+&quot;Hintergrund&quot;,
+
+cameras[&quot;CamsBG&quot;],
+
+&quot;Hintergrund&quot;,
+
+configurations,
+
+slot_mapping,
+
+&quot;E0&quot;,
+
+OUTPUT_TEMPLATE,
+
+path_pattern,
+
+georefreshObjects,
+
+light_setups,
+
 )
-RENDER_MINIMUM = True
-MINIMUM_COUNT = 1 # Minimale Anzahl der Renderings
-PRE_RENDER = True # Bilder in niedriger Qualität vorrendern
-VERSION = &quot;3&quot; # Version der Blocker-Datei
-BASE_PATH = (
-&quot;./renderings/output/elferplatz/&quot;
-if platform.system() == &quot;Darwin&quot;
-else &quot;/root/renderings/output/elferplatz/&quot;
-)
 
-OUTPUT_TEMPLATE = &quot;./B01/E_Ext/E{999}/M{0}-{1}-{2}/P{3}/FL{4}/V{5}/R{6}/F{7}-{8}-{9}/BS{10}-{11}/SW{12}-{13}/RL{14}/SP{15}/BG{16}/SZ{17}/FW{18}/DS{19}/KZ{20}/AS{21}&quot;
+
+configurations = [
+CFS[&quot;Bodykits&quot;],
+CFS[&quot;FelgenFull&quot;],
+CFS[&quot;Distanzscheiben&quot;],
+CFS[&quot;Distanzscheiben&quot;],
+CFS[&quot;Environment&quot;],
+]
+
+render_scene_with_environment( 
+
+&quot;Environment&quot;,
+
+cameras[&quot;EnvCam&quot;], #has camera car rotation switch
+
+&quot;Environment&quot;,
+
+configurations,
+
+slot_mapping,
+
+&quot;E0&quot;,
+
+OUTPUT_TEMPLATE,
+
+path_pattern,
+
+georefreshObjects,
+)
 </code></pre>
 
 
