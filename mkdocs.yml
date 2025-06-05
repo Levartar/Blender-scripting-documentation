@@ -10,7 +10,8 @@ nav:
       - Using Command Line Arguments: Blender Scripting/Using command line arguments.md
       - Render Settings: Blender Scripting/Render Settings.md
       - File Structure: Blender Scripting/File Structure.md
-      - Memory Probing: Blender Scripting/Memory Probing.md
+      - Memory Probing: Blender Scripting/Memory Probing.md#
+      - Environment Rendering: Blender Scripting/Environment Rendering.md
   - Plannings:
       - Kennzeichen Konfigurator: Plannings/Kennzeichen-Konfigurator.md
 
