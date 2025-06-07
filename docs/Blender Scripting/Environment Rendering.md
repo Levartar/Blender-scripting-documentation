@@ -1,27 +1,36 @@
+### Requirements
 - Background should contain detailed 3D scene
 - Background should be interchangeable
-- Only 1 Camera perspective
-
+- Sweet Spot Cameras only
+- Personalised Car should be inside the Environment
+- Lighting should be realistic
 
 ## Implementation
-- LInk Environemts into 964_ext.blend file
+
+### Considerations
+Main Problem is that the environments are not 360° and the pictures should be taken from different sweet spot angles. 
+- Cant be added to existing background Layers because existing cameras would show pictures where the environment ends
+- needs different Cameras
+### Blender File
+- Link environemts into 964_ext.blend file
 - Geometry node switch for different environments 
 - Compositor for Environment on new Scene layer 
 - 5 Cameras for different sweet spot photos
 - setup car rotation based on different sweet spot cameras 
 	- `[Cam1: 0°, Cam2: 45°...]`
-
+### Python Script
 - Code create new CFS for environment Geometry node switch
 - Create render environment sister function (called out of main render function)
+- For each part configuration renders for usual background and then for environment
+	- Environment has fewer Cameras
+	- Car rotates based on Camera to always show sweet spot environment
 
-```PYthon
-# Environment
+Mocked Code
+```Python
+# Environment Script part
+def EnvironmentBG():
 
-def Environment():
-
-bpy.data.objects["Car_Instancer_Base"].modifiers["GeometryNodes"]["Socket_4"] = 0
-
-configurations = [
+configurations = [ # Parts that all influence the Layer (Background in this case)
 CFS["Bodykits"],
 CFS["FelgenFull"],
 CFS["Distanzscheiben"],
@@ -29,76 +38,33 @@ CFS["Distanzscheiben"],
 CFS["BGColorComp"],
 ]
 
-  
 
-slot_mapping = {
-
+slot_mapping = { # Path name fill ins
 "bodykit": 0, # Bodykits
-
-"felge": 1, # FelgenFull
-
-"distanzscheibeV": 2, # Distanzscheiben
-
-"distanzscheibeH": 2, # Distanzscheiben
-
-"hintergrund": 3, # CompositorHintergrund
-
+...
 }
 
-  
 
-render_scene_with_config(
-
+render_scene_with_config( # usual Render
 "Hintergrund",
-
 cameras["CamsBG"],
-
 "Hintergrund",
-
 configurations,
-
 slot_mapping,
-
-"E0",
-
-OUTPUT_TEMPLATE,
-
-path_pattern,
-
-georefreshObjects,
-
-light_setups,
-
+...
 )
 
+# Switch 
+# Environments on 
+# Backgrounds  off
 
-configurations = [
-CFS["Bodykits"],
-CFS["FelgenFull"],
-CFS["Distanzscheiben"],
-CFS["Distanzscheiben"],
-CFS["Environment"],
-]
-
-render_scene_with_environment( 
-
+render_scene_with_environment( # render for environment
 "Environment",
-
-cameras["EnvCam"], #has camera car rotation switch
-
+cameras["CamsEnv"], #has camera car rotation switch
 "Environment",
-
 configurations,
-
 slot_mapping,
-
-"E0",
-
-OUTPUT_TEMPLATE,
-
-path_pattern,
-
-georefreshObjects,
+...
 )
 ```
 
