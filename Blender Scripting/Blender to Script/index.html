@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../File%20Structure/">
-      
-      
-        <link rel="next" href="../../Plannings/Kennzeichen-Konfigurator/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Environment Rendering - W&S Elferplatz Combinations rendering Documentation</title>
+        <title>Blender to Script - W&S Elferplatz Combinations rendering Documentation</title>
       
     
     
@@ -62,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#requirements" class="md-skip">
+        <a href="#questions" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Environment Rendering
+              Blender to Script
             
           </span>
         </div>
@@ -213,20 +209,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -242,7 +236,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Blender Scripting
@@ -414,30 +408,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Environment Rendering
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Environment%20Rendering/" class="md-nav__link">
         
   
   
@@ -448,75 +422,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Implementation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Considerations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blender-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Blender File
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#python-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python Script
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -614,6 +519,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -622,53 +529,47 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
+  <a href="#geometry-nodes" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirements
+      Geometry Nodes
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#materials" class="md-nav__link">
     <span class="md-ellipsis">
-      Implementation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Implementation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Considerations
+      Materials
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#blender-file" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#compositing" class="md-nav__link">
     <span class="md-ellipsis">
-      Blender File
+      Compositing
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#python-script" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#layers" class="md-nav__link">
     <span class="md-ellipsis">
-      Python Script
+      Layers
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#scripting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scripting
+    </span>
+  </a>
   
 </li>
       
@@ -688,83 +589,19 @@
 
 
 
-  <h1>Environment Rendering</h1>
-
-<h3 id="requirements">Requirements</h3>
-<ul>
-<li>Background should contain detailed 3D scene</li>
-<li>Background should be interchangeable</li>
-<li>Sweet Spot Cameras only</li>
-<li>Personalised Car should be inside the Environment</li>
-<li>Lighting should be realistic</li>
-</ul>
-<h2 id="implementation">Implementation</h2>
-<h3 id="considerations">Considerations</h3>
-<p>Main Problem is that the environments are not 360° and the pictures should be taken from different sweet spot angles. 
-- Cant be added to existing background Layers because existing cameras would show pictures where the environment ends
-- needs different Cameras</p>
-<h3 id="blender-file">Blender File</h3>
-<ul>
-<li>Link environemts into 964_ext.blend file</li>
-<li>Geometry node switch for different environments </li>
-<li>Compositor for Environment on new Scene layer </li>
-<li>5 Cameras for different sweet spot photos</li>
-<li>setup car rotation based on different sweet spot cameras <ul>
-<li><code>[Cam1: 0°, Cam2: 45°...]</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="python-script">Python Script</h3>
-<ul>
-<li>Code create new CFS for environment Geometry node switch</li>
-<li>Create render environment sister function (called out of main render function)</li>
-<li>For each part configuration renders for usual background and then for environment<ul>
-<li>Environment has fewer Cameras</li>
-<li>Car rotates based on Camera to always show sweet spot environment</li>
-</ul>
-</li>
-</ul>
-<p>Mocked Code</p>
-<pre><code class="language-Python"># Environment Script part
-def EnvironmentBG():
-
-configurations = [ # Parts that all influence the Layer (Background in this case)
-CFS[&quot;Bodykits&quot;],
-CFS[&quot;FelgenFull&quot;],
-CFS[&quot;Distanzscheiben&quot;],
-CFS[&quot;Distanzscheiben&quot;],
-CFS[&quot;BGColorComp&quot;],
-]
-
-
-slot_mapping = { # Path name fill ins
-&quot;bodykit&quot;: 0, # Bodykits
-...
-}
-
-
-render_scene_with_config( # usual Render
-&quot;Hintergrund&quot;,
-cameras[&quot;CamsBG&quot;],
-&quot;Hintergrund&quot;,
-configurations,
-slot_mapping,
-...
-)
-
-# Switch 
-# Environments on 
-# Backgrounds  off
-
-render_scene_with_environment( # render for environment
-&quot;Environment&quot;,
-cameras[&quot;CamsEnv&quot;], #has camera car rotation switch
-&quot;Environment&quot;,
-configurations,
-slot_mapping,
-...
-)
-</code></pre>
+<p>How Blender File Settings are exposed to the script</p>
+<h1 id="questions">Questions:</h1>
+<h2 id="geometry-nodes">Geometry Nodes</h2>
+<p>Objects are Stored in Geo Nodes
+- How does a Menu switch work
+    - Where are input Objects Stored
+    - Where is the output Object Displayed</p>
+<h2 id="materials">Materials</h2>
+<h2 id="compositing">Compositing</h2>
+<p>Does each Layer have its own Composition layer?
+When do i need to Mask a Material with "Cryptomatte"?</p>
+<h2 id="layers">Layers</h2>
+<h2 id="scripting">Scripting</h2>
 
 
 
