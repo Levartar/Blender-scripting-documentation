@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#script-arguments" class="md-skip">
+        <a href="#script-examples" class="md-skip">
           Skip to content
         </a>
       
@@ -371,6 +371,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#script-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-blender-scripting-system-arguments-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Blender Scripting System Arguments work
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#script-arguments" class="md-nav__link">
     <span class="md-ellipsis">
       Script arguments
@@ -580,6 +598,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#script-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-blender-scripting-system-arguments-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Blender Scripting System Arguments work
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#script-arguments" class="md-nav__link">
     <span class="md-ellipsis">
       Script arguments
@@ -606,7 +642,18 @@
 
   <h1>Using Command Line Arguments</h1>
 
-<p>should always be in test mode when called from blender. Uses environment var for turning test mode off</p>
+<h2 id="script-examples">Script Examples</h2>
+<p>964_ext: Renders in TEST_MODE: only file paths and file count is logged</p>
+<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/964_ext_206.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_ext.py test
+</code></pre>
+<p>964_int: Renders in MINIMUM_MODE + PREVIEW_MODE + TEST_REND_MODE: minimum amount of preview pictures are rendered in human readable form</p>
+<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/964_int_173.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_int.py min pre test-rend
+</code></pre>
+<p>g_ext_early: Renders in MINIMUM_MODE + TEST_REND_MODE: minimum amount of fullhd pictures are rendered in encapsulated folder style</p>
+<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/g_ext_31.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/g_ext_early.py test min
+</code></pre>
+<h2 id="how-blender-scripting-system-arguments-work">How Blender Scripting System Arguments work</h2>
+<p>sys args contain all additional arguments when a program is called from the command line</p>
 <pre><code class="language-python">import sys
 argv = sys.argv
 argv = argv[argv.index(&quot;--&quot;) + 1:]  # get all args after &quot;--&quot;
@@ -636,6 +683,10 @@ print(argv)  # --&gt; ['example', 'args', '123']
 <tr>
 <td><code>pre</code></td>
 <td>renders are in low resolution</td>
+</tr>
+<tr>
+<td><code>test-rend</code></td>
+<td>renders pictures in human readable file paths<br>- <code>script-name</code><br>  - <code>layer-1</code><br>  - <code>layer-2</code><br>  - ...</td>
 </tr>
 </tbody>
 </table>
