@@ -1,3 +1,5 @@
+# deploy with:
+# mkdocs gh-deploy
 site_name: W&S Elferplatz Combinations rendering Documentation
 theme:
   name: material
