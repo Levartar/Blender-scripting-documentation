@@ -12,7 +12,7 @@ Main Problem is that the environments are not 360° and the pictures should be t
 - Cant be added to existing background Layers because existing cameras would show pictures where the environment ends
 - needs different Cameras
 - view with existing cameras cant be used?
-![[]]![Blender Camera View](../assets/Pasted%20image%2020250610105758.png)
+![Blender Camera View](../assets/Pasted%20image%2020250610105758.png)
 ### Blender File
 - Link environemts into 964_ext.blend file
 - Geometry node switch for different environments 
