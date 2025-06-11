@@ -16,12 +16,14 @@ blender --background cube2.blend --python mainscript.py -- example args 123
 ## Script arguments
 In this script the Arguments are called via command line are explained here.
 
-| Argument    | Explanation                                                                                                   |
-| ----------- | ------------------------------------------------------------------------------------------------------------- |
-| `test`      | no pictures are rendered only file paths are logged                                                           |
-| `minimum`   | only first picture for every camera is rendered                                                               |
-| `pre`       | renders are in low resolution                                                                                 |
-| `test-rend` | renders pictures in human readable file paths<br>- `script-name`<br>  - `layer-1`<br>  - `layer-2`<br>  - ... |
+| Argument         | Explanation                                                                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------- |
+| `test`           | no pictures are rendered only file paths are logged                                                           |
+| `minimum`        | only first picture for every camera is rendered                                                               |
+| `pre`            | renders are in low resolution                                                                                 |
+| `test-rend`      | renders pictures in human readable file paths<br>- `script-name`<br>  - `layer-1`<br>  - `layer-2`<br>  - ... |
+| `--v <v-number>` | sets the Version number of the blocker files                                                                  |
+
 
 ## Script Examples
 964_ext called from windows command line
@@ -43,4 +45,10 @@ g_ext_early: Renders in MINIMUM_MODE + TEST_REND_MODE: minimum amount of fullhd 
 ```Terminal
 blender -b Documents/mass-rend-test/g_ext_31.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/g_ext_early.py test min
 ```
+
+g_ext_early: with changed version
+```Terminal
+blender -b Documents/mass-rend-test/g_ext_31.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/g_ext_early.py --v 4
+```
+
 
