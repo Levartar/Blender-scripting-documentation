@@ -678,6 +678,10 @@ print(argv)  # --&gt; ['example', 'args', '123']
 <td><code>test-rend</code></td>
 <td>renders pictures in human readable file paths<br>- <code>script-name</code><br>  - <code>layer-1</code><br>  - <code>layer-2</code><br>  - ...</td>
 </tr>
+<tr>
+<td><code>--v &lt;v-number&gt;</code></td>
+<td>sets the Version number of the blocker files</td>
+</tr>
 </tbody>
 </table>
 <h2 id="script-examples">Script Examples</h2>
@@ -692,6 +696,9 @@ print(argv)  # --&gt; ['example', 'args', '123']
 </code></pre>
 <p>g_ext_early: Renders in MINIMUM_MODE + TEST_REND_MODE: minimum amount of fullhd pictures are rendered in encapsulated folder style</p>
 <pre><code class="language-Terminal">blender -b Documents/mass-rend-test/g_ext_31.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/g_ext_early.py test min
+</code></pre>
+<p>g_ext_early: with changed version</p>
+<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/g_ext_31.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/g_ext_early.py --v 4
 </code></pre>
 
 
