@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#script-examples" class="md-skip">
+        <a href="#how-blender-scripting-system-arguments-work" class="md-skip">
           Skip to content
         </a>
       
@@ -371,15 +371,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#script-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Script Examples
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#how-blender-scripting-system-arguments-work" class="md-nav__link">
     <span class="md-ellipsis">
       How Blender Scripting System Arguments work
@@ -392,6 +383,15 @@
   <a href="#script-arguments" class="md-nav__link">
     <span class="md-ellipsis">
       Script arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script Examples
     </span>
   </a>
   
@@ -598,15 +598,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#script-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Script Examples
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#how-blender-scripting-system-arguments-work" class="md-nav__link">
     <span class="md-ellipsis">
       How Blender Scripting System Arguments work
@@ -619,6 +610,15 @@
   <a href="#script-arguments" class="md-nav__link">
     <span class="md-ellipsis">
       Script arguments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script Examples
     </span>
   </a>
   
@@ -642,16 +642,6 @@
 
   <h1>Using Command Line Arguments</h1>
 
-<h2 id="script-examples">Script Examples</h2>
-<p>964_ext: Renders in TEST_MODE: only file paths and file count is logged</p>
-<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/964_ext_206.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_ext.py test
-</code></pre>
-<p>964_int: Renders in MINIMUM_MODE + PREVIEW_MODE + TEST_REND_MODE: minimum amount of preview pictures are rendered in human readable form</p>
-<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/964_int_173.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_int.py min pre test-rend
-</code></pre>
-<p>g_ext_early: Renders in MINIMUM_MODE + TEST_REND_MODE: minimum amount of fullhd pictures are rendered in encapsulated folder style</p>
-<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/g_ext_31.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/g_ext_early.py test min
-</code></pre>
 <h2 id="how-blender-scripting-system-arguments-work">How Blender Scripting System Arguments work</h2>
 <p>sys args contain all additional arguments when a program is called from the command line</p>
 <pre><code class="language-python">import sys
@@ -690,6 +680,19 @@ print(argv)  # --&gt; ['example', 'args', '123']
 </tr>
 </tbody>
 </table>
+<h2 id="script-examples">Script Examples</h2>
+<p>964_ext called from windows command line</p>
+<pre><code class="language-Terminal">blender -b 964_ext_238.blend -P ../../../../../../../../Desktop/EP_Repo/ansible-server-management/roles/blender_scripting/files/964_ext.py pre min test-rend
+</code></pre>
+<p>964_ext: Renders in TEST_MODE: only file paths and file count is logged</p>
+<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/964_ext_206.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_ext.py test
+</code></pre>
+<p>964_int: Renders in MINIMUM_MODE + PREVIEW_MODE + TEST_REND_MODE: minimum amount of preview pictures are rendered in human readable form</p>
+<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/964_int_173.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_int.py min pre test-rend
+</code></pre>
+<p>g_ext_early: Renders in MINIMUM_MODE + TEST_REND_MODE: minimum amount of fullhd pictures are rendered in encapsulated folder style</p>
+<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/g_ext_31.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/g_ext_early.py test min
+</code></pre>
 
 
 
