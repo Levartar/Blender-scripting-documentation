@@ -21,7 +21,7 @@ For Car Body, Rims, and Lights, each with 3 different materials, this already le
 
 ### Solving the Problem
 Because of this we are not rendering each combination individually we only render each single part with each combination and combining them in post. 
-![Reflections](../assets/reflections.png)
+![Reflections](docs/assets/reflections.png)
 This way we still render the same amount of pixels but we can remove redundant images if they do not affect each other. For example: if the rims change color the headlights don't need to rendered again. 
 Now we can create dependency tables that show which part can affect the rendering of another part and which part can be rendered independently. 
 

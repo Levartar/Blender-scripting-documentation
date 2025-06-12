@@ -36,3 +36,19 @@ Kennzeichen = {
 	3: "03", # Schweiz
 }
 ```
+
+When generating Combinations we create tuples like this:
+```
+###################### Combinations for DecalsBase ######################
+Fahrwerk, Bodykits, BGColor, DecalCol, DecalType, Kennzeichen
+(1, 1, (0.25, 0.25, 0.25, 1.0), 0, 0, 1)
+(2, 2, (0.25, 0.25, 0.25, 1.0), 0, 1, 2)
+(1, 3, (0.25, 0.25, 0.25, 1.0), 1, 1, 3)
+```
+
+When rendering we iterate over these tuples. Set all parts accordingly and take a picture for each Camera
+## Considerations
+- Cameras could be considered to be a part of configurations as well
+- Light setups could be considered to be a part of configurations
+- Glass setups could be considered to be part of configurations
+- exceptions should be made if we don't want specific combinations
