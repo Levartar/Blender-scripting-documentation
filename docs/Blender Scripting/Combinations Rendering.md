@@ -1,4 +1,6 @@
-### 🧪 Rendering Combinations (Plain Markdown)
+### [Configurations Generation](Configurations/Configurations%20Generation)
+
+### Rendering Combinations
 
 The task is to render cars with different materials for each part and their corresponding combinations.
 
