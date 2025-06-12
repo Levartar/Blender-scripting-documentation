@@ -4,16 +4,21 @@ site_name: W&S Elferplatz Combinations rendering Documentation
 theme:
   name: material
 nav:
-  - Home: W&S - Blender scripting documentation.md
+  - Home: Blender Scripting/W&S - Blender scripting documentation.md
   - Blender Scripting:
-      - Combinations Rendering: Blender Scripting/Combinations Rendering.md
-      - Headless Rendering: Blender Scripting/Headless Rendering.md
-      - Script Loading: Blender Scripting/Script loading.md
-      - Using Command Line Arguments: Blender Scripting/Using command line arguments.md
-      - Render Settings: Blender Scripting/Render Settings.md
-      - File Structure: Blender Scripting/File Structure.md
-      - Memory Probing: Blender Scripting/Memory Probing.md#
-      - Environment Rendering: Blender Scripting/Environment Rendering.md
+      - Configurations:
+          - Combinations Rendering: Combinations Rendering.md
+          - Configurations Generation: Configurations Generation.md
+      - Headless Rendering:
+          - Headless Rendering: Headless Rendering.md
+          - Script Loading: Script loading.md
+          - Using Command Line Arguments: Using command line arguments.md
+      - Scripting:
+          - Blender to Script: Blender to Script.md
+          - Environment Rendering: Environment Rendering.md
+          - File Structure: File Structure.md
+          - Memory Probing: Memory Probing.md
+          - Render Settings: Render Settings.md
   - Plannings:
       - Kennzeichen Konfigurator: Plannings/Kennzeichen-Konfigurator.md
 
