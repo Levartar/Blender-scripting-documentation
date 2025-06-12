@@ -9,22 +9,18 @@
       
       
       
-        <link rel="prev" href="../../W%26S%20-%20Blender%20scripting%20documentation/">
       
       
-        <link rel="next" href="../Headless%20Rendering/">
-      
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Combinations Rendering - W&S Elferplatz Combinations rendering Documentation</title>
+        <title>Headless Rendering - W&S Elferplatz Combinations rendering Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
       
 
@@ -43,7 +39,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rendering-combinations-plain-markdown" class="md-skip">
+        <a href="#how-to-render-images-using-headless-blender" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +74,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="W&amp;S Elferplatz Combinations rendering Documentation" class="md-header__button md-logo" aria-label="W&S Elferplatz Combinations rendering Documentation" data-md-component="logo">
+    <a href="../../.." title="W&amp;S Elferplatz Combinations rendering Documentation" class="md-header__button md-logo" aria-label="W&S Elferplatz Combinations rendering Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -98,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Combinations Rendering
+              Headless Rendering
             
           </span>
         </div>
@@ -176,7 +172,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="W&amp;S Elferplatz Combinations rendering Documentation" class="md-nav__button md-logo" aria-label="W&S Elferplatz Combinations rendering Documentation" data-md-component="logo">
+    <a href="../../.." title="W&amp;S Elferplatz Combinations rendering Documentation" class="md-nav__button md-logo" aria-label="W&S Elferplatz Combinations rendering Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -213,20 +209,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -242,7 +236,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Blender Scripting
@@ -253,30 +247,48 @@
                 
   
   
+  
+  
     
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
           
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
-    Combinations Rendering
+    Configurations
     
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Configurations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Combinations Rendering.md" class="md-nav__link">
         
   
   
@@ -287,57 +299,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#rendering-combinations-plain-markdown" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧪 Rendering Combinations (Plain Markdown)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solving-the-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solving the Problem
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Solving the Problem">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dependency-tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependency Tables
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -350,7 +311,76 @@
   
   
     <li class="md-nav__item">
-      <a href="../Headless%20Rendering/" class="md-nav__link">
+      <a href="../../../Configurations Generation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configurations Generation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Headless Rendering
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Headless Rendering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Headless Rendering.md" class="md-nav__link">
         
   
   
@@ -373,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Script%20loading/" class="md-nav__link">
+      <a href="../../../Script loading.md" class="md-nav__link">
         
   
   
@@ -396,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Using%20command%20line%20arguments/" class="md-nav__link">
+      <a href="../../../Using command line arguments.md" class="md-nav__link">
         
   
   
@@ -412,6 +442,52 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Scripting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -419,12 +495,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../Render%20Settings/" class="md-nav__link">
+      <a href="../../../Blender to Script.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Render Settings
+    Blender to Script
     
   </span>
   
@@ -442,7 +518,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../File%20Structure/" class="md-nav__link">
+      <a href="../../../Environment Rendering.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environment Rendering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../File Structure.md" class="md-nav__link">
         
   
   
@@ -465,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Blender Scripting/Memory Probing.md#" class="md-nav__link">
+      <a href="../../../Memory Probing.md" class="md-nav__link">
         
   
   
@@ -488,17 +587,25 @@
   
   
     <li class="md-nav__item">
-      <a href="../Environment%20Rendering/" class="md-nav__link">
+      <a href="../../../Render Settings.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Environment Rendering
+    Render Settings
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -556,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Plannings/Kennzeichen-Konfigurator/" class="md-nav__link">
+      <a href="../../../Plannings/Kennzeichen-Konfigurator/" class="md-nav__link">
         
   
   
@@ -604,28 +711,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rendering-combinations-plain-markdown" class="md-nav__link">
+  <a href="#how-to-render-images-using-headless-blender" class="md-nav__link">
     <span class="md-ellipsis">
-      🧪 Rendering Combinations (Plain Markdown)
+      How to render images using Headless Blender
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to render images using Headless Blender">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#need" class="md-nav__link">
+    <span class="md-ellipsis">
+      Need:
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#solving-the-problem" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#blender-terminal-rendering-command" class="md-nav__link">
     <span class="md-ellipsis">
-      Solving the Problem
+      Blender Terminal Rendering Command:
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Solving the Problem">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#dependency-tables" class="md-nav__link">
+  <a href="#headless-example" class="md-nav__link">
     <span class="md-ellipsis">
-      Dependency Tables
+      Headless Example:
     </span>
   </a>
   
@@ -652,33 +768,77 @@
 
 
 
-  <h1>Combinations Rendering</h1>
+  <h1>Headless Rendering</h1>
 
-<h3 id="rendering-combinations-plain-markdown">🧪 Rendering Combinations (Plain Markdown)</h3>
-<p>The task is to render cars with different materials for each part and their corresponding combinations.</p>
-<p>Even for just 3 different parts with different color options, this leads to:</p>
-<p><strong>p^(c₁ × c₂ × c₃)</strong> possible combinations,<br />
-where:</p>
+<h2 id="how-to-render-images-using-headless-blender">How to render images using Headless Blender</h2>
+<p>This allows us to use Blender from the command-line. Headless means no blender ui is opened and all commands to the blend file have to be made through command-line commands which are explained here</p>
+<h3 id="need">Need:</h3>
+<p>Comand Line Blender Launch:
+https://docs.blender.org/manual/en/latest/advanced/command_line/launch/index.html#command-line-launch-index</p>
+<h3 id="blender-terminal-rendering-command">Blender Terminal Rendering Command:</h3>
+<p>https://docs.blender.org/manual/en/latest/advanced/command_line/render.html</p>
+<p>min usable:</p>
+<pre><code>blender -b file.blend -f 10
+</code></pre>
 <ul>
-<li>
-<p><strong>p</strong> is the number of different parts</p>
+<li><code>blender</code> <ul>
+<li>blender headless launch command</li>
+</ul>
 </li>
-<li>
-<p><strong>cₙ</strong> is the number of materials that part can have</p>
+<li><code>-b</code> <ul>
+<li>render in background</li>
+</ul>
+</li>
+<li><code>file.blend</code><ul>
+<li>path to file that renders</li>
+</ul>
+</li>
+<li><code>-f 10</code><ul>
+<li>render the 10th frame (required!)</li>
+</ul>
 </li>
 </ul>
-<p><strong>Example:</strong><br />
-For Car Body, Rims, and Lights, each with 3 different materials, this already leads to trillions of combinations:</p>
-<p><strong>3^(3 × 3 × 3) = 3^27 = 7,625,597,484,987</strong></p>
-<h3 id="solving-the-problem">Solving the Problem</h3>
-<p>Because of this we are not rendering each combination individually we only render each single part with each combination and combining them in post. 
-<img alt="Reflections" src="../../assets/reflections.png" />
-This way we still render the same amount of pixels but we can remove redundant images if they do not affect each other. For example: if the rims change color the headlights don't need to rendered again. 
-Now we can create dependency tables that show which part can affect the rendering of another part and which part can be rendered independently. </p>
-<h4 id="dependency-tables">Dependency Tables</h4>
-<p>Each Part can be dependent on multiple other parts
-Each Part can be rendered by multiple cameras
-Each Camera can be rendered with multiple light Setups</p>
+<p>render to specific output path:</p>
+<pre><code class="language-Terminal">blender -b Documents/Blender/headless_test/cube1.blend -o Documents/Blender/Renders/frame_##### -E CYCLES -f 10
+</code></pre>
+<ul>
+<li><code>-o</code> <ul>
+<li>output path</li>
+</ul>
+</li>
+<li><code>frame_#####</code> <ul>
+<li>enumerates each rendered frame counting up</li>
+</ul>
+</li>
+<li><code>-E CYCLES</code><ul>
+<li>Sets the render engine to cycles. Default is what the file is using</li>
+</ul>
+</li>
+</ul>
+<p>Headless Script Loading</p>
+<pre><code class="language-Terminal">blender -b &quot;$BLEND_FILE&quot; -P &quot;$SCRIPT_FILE&quot;
+</code></pre>
+<h3 id="headless-example">Headless Example:</h3>
+<p>Elferplatz script Headless rendering Usage:</p>
+<p>Basic call: Renders in full Size</p>
+<pre><code>blender -b &lt;path-to-.blend&gt; -P &lt;path-to-script&gt; 
+</code></pre>
+<p>Options:
+Options are added at the end of the Terminal call
+- <code>test</code> no pictures are rendered only file paths are logged and amount of files are counted
+- <code>test-rend</code> renders pictures in human viewable format
+- <code>min</code> only first picture for every camera is rendered
+- <code>pre</code> renders are in low resolution</p>
+<p>Example calls
+964_ext: Renders in TEST_MODE</p>
+<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/964_ext_206.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_ext.py test
+</code></pre>
+<p>964_int: Renders in MINIMUM_MODE + PREVIEW_MODE</p>
+<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/964_int_173.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_int.py min test
+</code></pre>
+<p>g_ext_early: Renders in MINIMUM_MODE + PREVIEW_MODE</p>
+<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/g_ext_31.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/g_ext_early.py test min
+</code></pre>
 
 
 
@@ -727,10 +887,10 @@ Each Camera can be rendered with multiple light Setups</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

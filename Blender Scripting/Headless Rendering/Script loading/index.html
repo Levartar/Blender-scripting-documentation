@@ -9,22 +9,18 @@
       
       
       
-        <link rel="prev" href="../Render%20Settings/">
       
       
-        <link rel="next" href="../Environment%20Rendering/">
-      
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>File Structure - W&S Elferplatz Combinations rendering Documentation</title>
+        <title>Script loading - W&S Elferplatz Combinations rendering Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
       
 
@@ -43,7 +39,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,6 +57,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#loading-scripts-headless" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -73,7 +74,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="W&amp;S Elferplatz Combinations rendering Documentation" class="md-header__button md-logo" aria-label="W&S Elferplatz Combinations rendering Documentation" data-md-component="logo">
+    <a href="../../.." title="W&amp;S Elferplatz Combinations rendering Documentation" class="md-header__button md-logo" aria-label="W&S Elferplatz Combinations rendering Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -93,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              File Structure
+              Script loading
             
           </span>
         </div>
@@ -171,7 +172,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="W&amp;S Elferplatz Combinations rendering Documentation" class="md-nav__button md-logo" aria-label="W&S Elferplatz Combinations rendering Documentation" data-md-component="logo">
+    <a href="../../.." title="W&amp;S Elferplatz Combinations rendering Documentation" class="md-nav__button md-logo" aria-label="W&S Elferplatz Combinations rendering Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -208,20 +209,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -237,7 +236,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Blender Scripting
@@ -250,8 +249,46 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configurations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Configurations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../Combinations%20Rendering/" class="md-nav__link">
+      <a href="../../../Combinations Rendering.md" class="md-nav__link">
         
   
   
@@ -274,7 +311,76 @@
   
   
     <li class="md-nav__item">
-      <a href="../Headless%20Rendering/" class="md-nav__link">
+      <a href="../../../Configurations Generation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configurations Generation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Headless Rendering
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Headless Rendering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Headless Rendering.md" class="md-nav__link">
         
   
   
@@ -297,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Script%20loading/" class="md-nav__link">
+      <a href="../../../Script loading.md" class="md-nav__link">
         
   
   
@@ -320,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Using%20command%20line%20arguments/" class="md-nav__link">
+      <a href="../../../Using command line arguments.md" class="md-nav__link">
         
   
   
@@ -336,6 +442,52 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Scripting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Scripting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -343,12 +495,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../Render%20Settings/" class="md-nav__link">
+      <a href="../../../Blender to Script.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Render Settings
+    Blender to Script
     
   </span>
   
@@ -363,17 +515,33 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Environment Rendering.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environment Rendering
     
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
   
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+  
+    <li class="md-nav__item">
+      <a href="../../../File Structure.md" class="md-nav__link">
         
   
   
@@ -384,7 +552,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -397,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Blender Scripting/Memory Probing.md#" class="md-nav__link">
+      <a href="../../../Memory Probing.md" class="md-nav__link">
         
   
   
@@ -420,17 +587,25 @@
   
   
     <li class="md-nav__item">
-      <a href="../Environment%20Rendering/" class="md-nav__link">
+      <a href="../../../Render Settings.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Environment Rendering
+    Render Settings
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -488,7 +663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Plannings/Kennzeichen-Konfigurator/" class="md-nav__link">
+      <a href="../../../Plannings/Kennzeichen-Konfigurator/" class="md-nav__link">
         
   
   
@@ -529,6 +704,47 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loading-scripts-headless" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading scripts headless
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Loading scripts headless">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Problem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiplatform-script-loading-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiplatform script loading solution
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -543,30 +759,35 @@
 
 
 
-  <h1>File Structure</h1>
+  <h1>Script loading</h1>
 
-<pre><code class="language-Python">#Imports
-import bpy
-import os
-...
+<p>Blender allows us to use Blender scripts within the .blend file. These scripts are run in an internal Python component that has no access to you file system. This means you cant import scripts within scripts normally!</p>
+<h2 id="loading-scripts-headless">Loading scripts headless</h2>
+<p>In an example i have a scripts folder for a cube.blend file that wants to import scripts</p>
+<pre><code>your_project/
+├── cube.blend
+└── scripts/
+    ├── mainscript.py
+    └── importscript.py
+</code></pre>
+<p>Importing headless works perfectly using</p>
+<pre><code>blender -b  cube.blend -P scripts/mainscript.py
+</code></pre>
+<p>mainscript.py imports importscript.py for helperfunctions.</p>
+<h3 id="the-problem">The Problem</h3>
+<p>Opening mainscript.py in the Blender scripting editor and running it throws an error because Python cant find the file. To solve this a switch has to be added to the code that recognises both methods of launching the script.</p>
+<h2 id="multiplatform-script-loading-solution">Multiplatform script loading solution</h2>
+<pre><code class="language-Python"># Try to detect the directory this script is in
+if &quot;__file__&quot; in globals() and os.path.isfile(__file__):
+    # Running headless
+    script_dir = os.path.dirname(__file__)
+else:
+    # Running from Blender's scripting tab
+    script_dir = bpy.path.abspath(&quot;//scripts&quot;)
+if script_dir not in sys.path:
+    sys.path.append(script_dir)
 
-#File Specific Definition
-OUTPUT_TEMPLATE 
-path_pattern = [
-&quot;IC&quot;,
-&quot;NF&quot;,
-]
-CAMERAS_TO_RENDER = [
-&quot;C1&quot;,
-&quot;C2&quot;,
-]
-LOOPS_TO_RENDER = [
-&quot;E0&quot;,
-&quot;E1&quot;,
-]
-cameras
-light_setups
-glass_setups #Optional
+print(&quot;Script dir:&quot;, script_dir)
 </code></pre>
 
 
@@ -616,10 +837,10 @@ glass_setups #Optional
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>
