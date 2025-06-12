@@ -6,19 +6,19 @@ theme:
 nav:
   - Home: Blender Scripting/W&S - Blender scripting documentation.md
   - Blender Scripting:
-      - Configurations:
-          - Combinations Rendering: Combinations Rendering.md
-          - Configurations Generation: Configurations Generation.md
       - Headless Rendering:
-          - Headless Rendering: Headless Rendering.md
-          - Script Loading: Script loading.md
-          - Using Command Line Arguments: Using command line arguments.md
+          - Headless Rendering: Blender Scripting/Headless Rendering/Headless Rendering.md
+          - Script Loading: Blender Scripting/Headless Rendering/Script loading.md
+          - Using Command Line Arguments: Blender Scripting/Headless Rendering/Using command line arguments.md
+      - Configurations:
+          - Combinations Rendering: Blender Scripting/Configurations/Combinations Rendering.md
+          - Configurations Generation: Blender Scripting/Configurations/Configurations Generation.md
       - Scripting:
-          - Blender to Script: Blender to Script.md
-          - Environment Rendering: Environment Rendering.md
-          - File Structure: File Structure.md
-          - Memory Probing: Memory Probing.md
-          - Render Settings: Render Settings.md
+          - Blender to Script: Blender Scripting/Scripting/Blender to Script.md
+          - Environment Rendering: Blender Scripting/Scripting/Environment Rendering.md
+          - File Structure: Blender Scripting/Scripting/File Structure.md
+          - Memory Probing: Blender Scripting/Scripting/Memory Probing.md
+          - Render Settings: Blender Scripting/Scripting/Render Settings.md
   - Plannings:
       - Kennzeichen Konfigurator: Plannings/Kennzeichen-Konfigurator.md
 
