@@ -861,28 +861,36 @@
 <p>Objects are stored in Geo nodes. Geo nodes can be used to change the blender mesh.</p>
 <p><em>Example Backlights</em>
 <code>'bpy.data.objects["Car_LightsBack"].modifiers["GeometryNodes"]["Socket_6"]'</code> # This is a datapath that accesses the geometry. </p>
-<p>Generating a datapath:
-- entering blender 
-- right click the geo node
-- click <code>copy full data path</code></p>
-<p>Modifying the datapath value:
-- <code>path = 'bpy.data.objects["Car_LightsBack"].modifiers["GeometryNodes"]["Socket_6"]'</code>
-- <code>key = '1'</code> # String value that the geo node can take
-- <code>exec(f"{path} = {key})"</code> # exec runs a command in blender environment. This sets the var
-- If anything is wrong within <code>exec()</code> blender silently fails. This means the program still runs but doesn't change any blender values. When rendering this is particularly annoying as you only see if it worked after a few images rendered.</p>
+<p>Generating a datapath:</p>
+<ul>
+<li>entering blender </li>
+<li>right click the geo node</li>
+<li>click <code>copy full data path</code></li>
+</ul>
+<p>Modifying the datapath value:</p>
+<ul>
+<li><code>path = 'bpy.data.objects["Car_LightsBack"].modifiers["GeometryNodes"]["Socket_6"]'</code></li>
+<li><code>key = '1'</code> # String value that the geo node can take</li>
+<li><code>exec(f"{path} = {key})"</code> # exec runs a command in blender environment. This sets the var</li>
+<li>If anything is wrong within <code>exec()</code> blender silently fails. This means the program still runs but doesn't change any blender values. When rendering this is particularly annoying as you only see if it worked after a few images rendered.</li>
+</ul>
 <h2 id="materials">Materials</h2>
 <p>Materials are stored in Material nodes. Material nodes can be used to change an objects color and shading.</p>
 <p><em>Example Main Lack Color</em>
 <code>'bpy.data.node_groups["COLORGOD"].nodes["LACKFARBE"].outputs[0].default_value'</code> # This is a datapath that accesses a material node.</p>
-<p>Generating a datapath:
-- entering blender 
-- right click the material node
-- click <code>copy full data path</code></p>
-<p>Modifying the datapath value:
-- <code>path = 'bpy.data.node_groups["COLORGOD"].nodes["LACKFARBE"].outputs[0].default_value'</code>
-- <code>key = (r, g, b, alpha)</code> # rgb value that the material node can take
-- <code>exec(f"{path} = {key})"</code> # exec runs a command in blender environment. This sets the var
-- If anything is wrong within <code>exec()</code> blender silently fails. This means the program still runs but doesn't change any blender values. When rendering this is particularly annoying as you only see if it worked after a few images rendered.</p>
+<p>Generating a datapath:</p>
+<ul>
+<li>entering blender </li>
+<li>right click the material node</li>
+<li>click <code>copy full data path</code></li>
+</ul>
+<p>Modifying the datapath value:</p>
+<ul>
+<li><code>path = 'bpy.data.node_groups["COLORGOD"].nodes["LACKFARBE"].outputs[0].default_value'</code></li>
+<li><code>key = (r, g, b, alpha)</code> # rgb value that the material node can take</li>
+<li><code>exec(f"{path} = {key})"</code> # exec runs a command in blender environment. This sets the var</li>
+<li>If anything is wrong within <code>exec()</code> blender silently fails. This means the program still runs but doesn't change any blender values. When rendering this is particularly annoying as you only see if it worked after a few images rendered.</li>
+</ul>
 <h2 id="layers">Layers</h2>
 <p>The blender files contain different layers. Each layer is a different setup for for example Full Car Rendering, Brake Rendering, Backlight Rendering...</p>
 <p><img alt="image of blender layers" src="../../../assets/blender_layers.png" /></p>
