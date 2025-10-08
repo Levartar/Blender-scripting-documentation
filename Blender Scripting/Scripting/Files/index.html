@@ -1039,21 +1039,63 @@ A file storage template. Each <code>{var}</code> gets regex replaced with the va
 <table>
 <thead>
 <tr>
-<th><code>path_pattern = ["P","FL","V",.."</code></th>
+<th><code>CAMERAS_TO_RENDER = ["C1","C2",..</code></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Keys used for replacing the corresponding output template <code>{var}</code></td>
+<td>List of all Camera names as they are named in Blender that should be rendered</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>LOOPS_TO_RENDER = ["Hintergrund","Bremsen",..</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>List of all render loops. A render loop is responsible for rendering all configurations a ex. <code>Hintergrund</code> can have. See more at CFS</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>set_render_settings()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Helpers/#set-render-settings">see helpers</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>cameras = {"CamsBG": [cam for cam in ["C1", "C2", "C3", "C4", "C5", "C10"] if cam in CAMERAS_TO_RENDER],..</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Helpers/#set-render-settings">see helpers</a></td>
 </tr>
 </tbody>
 </table>
 <h3 id="964_extpy">964_ext.py</h3>
+<p>964 exterieur script </p>
 <h3 id="964_intpy">964_int.py</h3>
+<p>964 interieur script </p>
 <h3 id="f_extpy">f_ext.py</h3>
+<p>F model exterieur script </p>
 <h3 id="f_intpy">f_int.py</h3>
+<p>F model interieur script </p>
 <h3 id="g_extpy">g_ext.py</h3>
+<p>G model exterieur script </p>
 <h3 id="g_intpy">g_int.py</h3>
+<p>G model interieur script </p>
 
 
 
