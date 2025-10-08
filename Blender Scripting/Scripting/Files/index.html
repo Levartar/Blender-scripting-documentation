@@ -595,6 +595,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#render-loop-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Render Loop Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#964_extpy" class="md-nav__link">
     <span class="md-ellipsis">
       964_ext.py
@@ -929,6 +938,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#render-loop-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Render Loop Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#964_extpy" class="md-nav__link">
     <span class="md-ellipsis">
       964_ext.py
@@ -1006,7 +1024,7 @@
 <h1 id="files">Files</h1>
 <p>This folder consists of different scripts that individually run all configurations for a specific car exterieur and interieur.</p>
 <h2 id="scripts-overview">Scripts Overview</h2>
-<p>All scripts fundamentally work the same. They are made up of 1. A definition for this blender files specific variables. 2. Rendering commands with different configurations 3. A call to render all.</p>
+<p>All scripts fundamentally work the same. They are made up of 1. A definition for this blender files specific variables. 2. Render Loop commands 3. A call to render all.</p>
 <h3 id="file-specific-definitions">File Specific Definitions</h3>
 <p>This is the most time consuming part of the script and modifying these need extensive knowledge of the script and rendering pipeline or communication with the ones responsible.</p>
 <p>Explanation of the variables:</p>
@@ -1056,7 +1074,7 @@ A file storage template. Each <code>{var}</code> gets regex replaced with the va
 </thead>
 <tbody>
 <tr>
-<td>List of all render loops. A render loop is responsible for rendering all configurations a ex. <code>Hintergrund</code> can have. See more at CFS</td>
+<td>List of all render loops. A render loop is responsible for rendering all configurations a ex. <code>Hintergrund</code> can have. Commented out to skip. See more at CFS</td>
 </tr>
 </tbody>
 </table>
@@ -1080,10 +1098,96 @@ A file storage template. Each <code>{var}</code> gets regex replaced with the va
 </thead>
 <tbody>
 <tr>
-<td><a href="../Helpers/#set-render-settings">see helpers</a></td>
+<td>Defines the group of cameras that are rendered to show a specific feature</td>
 </tr>
 </tbody>
 </table>
+<table>
+<thead>
+<tr>
+<th><code>light_setups, glass_setups</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Depending on the camera switches the Light or Glass for a better render image</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>BGColors, Models,..</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feature mapping for the Blender file. Each value can be mapped to the corresponding blender datapath to change a configuraion. See more at CFS</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>CFS</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Central Feature Switch table: name -&gt; (data_path, mapping_dict)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>georefresh_objects</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Objects needing a force refresh after parameter changes</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>get_render_constants()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Return core constants passed into render_scene_with_config</td>
+</tr>
+</tbody>
+</table>
+<h3 id="render-loop-commands">Render Loop Commands</h3>
+<p>Each function prepares scene state (node / modifier sockets) then calls <code>render_scene_with_config()</code> with: loopKey, camera list, folder key, configurations, slot mapping, and a short variant code. Each loop is defined like:</p>
+<pre><code class="language-Python">def &lt;name&gt;():
+    &quot;&quot;&quot;Render Loop dependent variations.&quot;&quot;&quot;
+    bpy.data.objects[&quot;Car_Instancer_Base&quot;].modifiers[&quot;GeometryNodes&quot;][&quot;Socket_4&quot;] = 0 # Set socket needed for Loop
+
+    configurations = [ # Features that should generate all possible configurations out of all of their combined possible combinations
+        CFS[&quot;Bodykits&quot;],
+        ...
+    ]
+
+    slot_mapping = { # Used to generate the Path and keeping all images unique
+        &quot;bodykit&quot;: 0,
+        ...
+    }
+
+    render_scene_with_config( # Main render call
+        &quot;&lt;name&gt;&quot;,
+        cameras[&quot;&lt;CamsName&gt;&quot;],
+        &quot;&lt;name&gt;&quot;,
+        configurations,
+        slot_mapping,
+        &quot;E0&quot;,
+        *get_render_constants()
+    )
+</code></pre>
 <h3 id="964_extpy">964_ext.py</h3>
 <p>964 exterieur script </p>
 <h3 id="964_intpy">964_int.py</h3>
