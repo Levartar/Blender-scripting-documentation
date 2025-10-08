@@ -599,6 +599,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cloud-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-helpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Helpers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#render-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Render Settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Colors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-helpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Helpers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#set-render-settings" class="md-nav__link">
     <span class="md-ellipsis">
       Set Render Settings
@@ -841,6 +886,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cloud-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Config
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-helpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Helpers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#render-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Render Settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Colors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-helpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shared Helpers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#set-render-settings" class="md-nav__link">
     <span class="md-ellipsis">
       Set Render Settings
@@ -866,6 +956,50 @@
 
 
 <h1 id="helpers">Helpers</h1>
+<p>Files that are universally used and hold the main code and configurations for the Blender file</p>
+<h3 id="cloud-config">Cloud Config</h3>
+<p>Contains Cloud Configurations. As this Docu is public im not talking about the content see for yourself!</p>
+<h3 id="cloud-helpers">Cloud Helpers</h3>
+<p>Contains functions to interact with the cloud.</p>
+<table>
+<thead>
+<tr>
+<th><code>upload_to_s3(file_path)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uploads file in file_path to the cloud. File path on the cloud is the same as file_path</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>create_lockfile(file_path)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creates a Lockfile that prevents multiple servers rendering the same image</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>check_if_lockfile_exists(file_path)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Looks up the Lockfile that prevents multiple servers rendering the same image</td>
+</tr>
+</tbody>
+</table>
+<h3 id="render-settings">Render Settings</h3>
+<h3 id="shared-colors">Shared Colors</h3>
+<h3 id="shared-helpers">Shared Helpers</h3>
 <h3 id="set-render-settings">Set Render Settings</h3>
 
 
