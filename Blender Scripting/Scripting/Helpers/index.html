@@ -1005,10 +1005,139 @@
 </thead>
 <tbody>
 <tr>
-<td>Return Cartesian product (Set x Set) of configuration key sets.</td>
+<td>Return Cartesian product (Set x Set) of configuration key sets. This generates all possible combinations out of the Sets. configurations: list of (path, mapping_dict) pairs; uses mapping_dict.keys()</td>
 </tr>
+</tbody>
+</table>
+<table>
+<thead>
 <tr>
-<td>configurations: list of (path, mapping_dict) pairs; uses mapping_dict.keys()</td>
+<th><code>check_exceptions(config, slot_mapping=None)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Validates a combination against model/bodykit constraints. Returns False to skip rendering if forbidden pair occurs. slot_mapping: name -&gt; index; only checks when both 'model' and 'bodykit' exist.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>create_output_path(template, layer, configurations, slot_mapping, combination, path_pattern)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resolve OUTPUT_TEMPLATE placeholders and drop empty identifier blocks. Fills {layer} and feature placeholders using mapping dicts from configurations, filters segments matching identifier tokens with all X values, and prefixes BASE_PATH.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>georefresh(objects)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Force a GN refresh on listed objects by toggling modifier viewport state.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>reset_scene(active_loop)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reset scene modifiers and default color values before each render loop. Keeps specific settings for special loops to avoid unintended overrides.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>set_camera(camera_name)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set the active camera to the object named camera_name if it exists.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>switch_light_setups(camera_name, light_setups)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Apply a predefined light rig index for the given camera name if mapped.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>switch_glass_setups(camera_name, glass_setups)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set compositor glass variant index based on camera name mapping.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>felgenlicht(camera_name)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toggle special rim lights on certain cameras</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>render_scene_with_config()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Render all combinations across cameras, writing outputs per template. Applies exception checks, writes GN sockets from config via exec, refreshes GN, switches lights/glass per camera, and either prints (TEST_MODE) or renders and uploads. Uses lockfiles to avoid duplicate renders across hosts.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>print_output_logs()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Summarize TEST_MODE results: per-loop counts, per-layer counts, duplicates, totals.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>render_loops()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Execute selected render loops with distributed locking across hosts. On render servers, staggers startup, creates/reads lockfiles, runs functions, and reloads the .blend between loops to reset state. When not the owner, optionally re-enters in helper mode to assist ongoing loops.</td>
 </tr>
 </tbody>
 </table>
