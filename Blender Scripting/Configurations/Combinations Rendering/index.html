@@ -875,7 +875,7 @@
 <h1 id="combinations-rendering">Combinations Rendering</h1>
 <p>The task is to render cars with different materials for each part and their corresponding combinations.</p>
 <p>Even for just 3 different parts with different color options, this leads to:</p>
-<p><strong>p^(c₁ × c₂ × c₃)</strong> possible combinations, where:</p>
+<p><strong>p₁^c₁ × p₂^c₂ × p₃^c₃</strong> possible combinations, where:</p>
 <ul>
 <li>
 <p><strong>p</strong> is the number of different parts</p>
@@ -886,7 +886,7 @@
 </ul>
 <p><strong>Example:</strong><br />
 For Car Body, Rims, and Lights, each with 3 different materials, this already leads to thousands of combinations:</p>
-<p><strong>3^3<em>3^3</em>3^3 = 3^9 = 19683</strong></p>
+<p><strong>3^3×3^3×3^3 = 3^9 = 19683</strong></p>
 <h3 id="solving-the-problem">Solving the Problem</h3>
 <p>Because of this we are not rendering each combination individually we only render each single part with each combination and combining them in post. 
 <img alt="Reflections" src="docs/assets/reflections.png" />
