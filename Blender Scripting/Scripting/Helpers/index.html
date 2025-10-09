@@ -1105,12 +1105,27 @@
 </tr>
 </tbody>
 </table>
-<p>| <code>render_scene_with_config()</code> | 
-| ---------------- | 
-| This is the main function that renders all possible combinations of configurations. Understanding this is the main task of the code. 
-Renders all combinations across cameras, writing outputs per template. Writes Blender sockets from config via <code>exec(f"{path} = {key}")</code>, refreshes Blender, switches lights/glass per camera, and renders and uploads. 
-To test this function use system arg <code>test</code>. This prints logs instead of rendering.
-To test the renderings use <code>min</code> to only render the first combination. Use <code>pre</code> for a preview, low resolution and samples. Use <code>test-rend</code> to make the output path human readable |</p>
+<table>
+<thead>
+<tr>
+<th><code>render_scene_with_config()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>This is the main function that renders all possible combinations of configurations. Understanding this is the main task of the code.</td>
+</tr>
+<tr>
+<td>Renders all combinations across cameras, writing outputs per template. Writes Blender sockets from config via <code>exec(f"{path} = {key}")</code>, refreshes Blender, switches lights/glass per camera, and renders and uploads.</td>
+</tr>
+<tr>
+<td>To test this function use system arg <code>test</code>. This prints logs instead of rendering.</td>
+</tr>
+<tr>
+<td>To test the renderings use <code>min</code> to only render the first combination. Use <code>pre</code> for a preview, low resolution and samples. Use <code>test-rend</code> to make the output path human readable</td>
+</tr>
+</tbody>
+</table>
 <table>
 <thead>
 <tr>
