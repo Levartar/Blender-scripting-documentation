@@ -17,7 +17,7 @@ Node Groups: 112
 ```
 
 ## Blender Cleanup
-adding cleanup like cleaning up freed objects doesnt change memory usage
+adding cleanup like cleaning up freed objects doesn't change memory usage
 
 ## Python Memory Leaks
 Python Memory shows to be consistent

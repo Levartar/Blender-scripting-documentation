@@ -45,7 +45,7 @@ A file storage template. Each `{var}` gets regex replaced with the values the pa
 
 | ```BGColors, Models,..```| 
 | ---------------- | 
-| Feature mapping for the Blender file. Each value can be mapped to the corresponding blender datapath to change a configuraion. See more at CFS |
+| Feature mapping for the Blender file. Each value can be mapped to the corresponding blender datapath to change a configuration. See more at CFS |
 
 | ```CFS```| 
 | ---------------- | 

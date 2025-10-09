@@ -32,7 +32,7 @@ What render views do we need?
 ![|200](../../assets/Turbo_speedyellow_back.png)![|200](../../assets/Turbo_speedyellow_front.png)![|200](../../assets/Turbo_speedyellow_side.png)
 	- should use camera rotation
 	- car rotates on turntable
-	- car shouldnt clip into the ground
+	- car shouldn't clip into the ground
 ### Multiple Beauty-shots
 - hard to implement
 - more Blender Workload
