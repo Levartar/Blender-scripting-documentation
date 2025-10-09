@@ -643,15 +643,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#set-render-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Render Settings
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -930,15 +921,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#set-render-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Render Settings
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -998,9 +980,38 @@
 </tbody>
 </table>
 <h3 id="render-settings">Render Settings</h3>
+<p>Uses system Args to set different Render flags. All Flags are explained here: <a href="../../Headless%20Rendering/Using%20command%20line%20arguments/">Using command line Arguments</a></p>
+<table>
+<thead>
+<tr>
+<th><code>set_render_settings()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sets the Rendering Engine for Optix, Darwin based systems. Sets Blender render settings to Cycles, Resolution and Samples based on input</td>
+</tr>
+</tbody>
+</table>
 <h3 id="shared-colors">Shared Colors</h3>
+<p>Contains colors used by all Cars.</p>
 <h3 id="shared-helpers">Shared Helpers</h3>
-<h3 id="set-render-settings">Set Render Settings</h3>
+<p>Heart of the code.</p>
+<table>
+<thead>
+<tr>
+<th><code>generate_combinations(configuration)</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Return Cartesian product (Set x Set) of configuration key sets.</td>
+</tr>
+<tr>
+<td>configurations: list of (path, mapping_dict) pairs; uses mapping_dict.keys()</td>
+</tr>
+</tbody>
+</table>
 
 
 
