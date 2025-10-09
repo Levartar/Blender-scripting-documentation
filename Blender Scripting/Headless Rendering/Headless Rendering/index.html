@@ -991,11 +991,13 @@
 <pre><code>blender -b &lt;path-to-.blend&gt; -P &lt;path-to-script&gt; 
 </code></pre>
 <p>Options:
-Options are added at the end of the Terminal call
-- <code>test</code> no pictures are rendered only file paths are logged and amount of files are counted
-- <code>test-rend</code> renders pictures in human viewable format
-- <code>min</code> only first picture for every camera is rendered
-- <code>pre</code> renders are in low resolution</p>
+Options are added at the end of the Terminal call</p>
+<ul>
+<li><code>test</code> no pictures are rendered only file paths are logged and amount of files are counted</li>
+<li><code>test-rend</code> renders pictures in human viewable format</li>
+<li><code>min</code> only first picture for every camera is rendered</li>
+<li><code>pre</code> renders are in low resolution</li>
+</ul>
 <p>Example calls
 964_ext: Renders in TEST_MODE</p>
 <pre><code class="language-Terminal">blender -b Documents/mass-rend-test/964_ext_206.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_ext.py test
