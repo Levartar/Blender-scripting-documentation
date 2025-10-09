@@ -1,3 +1,5 @@
+!This Article is a Stump
+
 ## Custom Parameters table
 https://weiseundstark-my.sharepoint.com/:x:/g/personal/k_huber_wus_de/EW8Md5eKgH9Lm7pQZ8SGNNcBSovwHaoEyOgWjpfE9lf_Ow?rtime=u6tWlkHa3Ug
 

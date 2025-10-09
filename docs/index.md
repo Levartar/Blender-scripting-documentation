@@ -1,16 +1,33 @@
-# 🚗 High-Fidelity Porsche Rendering with Blender
+# 🚗 Elferplatz car rendering for W&S
 
-Welcome to our internal documentation hub for rendering Porsche vehicles using Blender.
+This is a documentation for w&s about the  Elferplatz python script.
 
-This site covers our workflows, tools, and best practices for creating photorealistic visualizations of Porsche models — from material configuration and headless rendering to automation and asset management.
+## 📚 Table of Contents
+
+### Blender Scripting
+
+#### Headless Rendering
+Start here if you need to know how to setup Blender to be able to run the script out of your command line
 
 
-Explore the sections to get started:
+- [Headless Rendering](Blender%20Scripting/Headless%20Rendering/Headless%20Rendering.md)
+- [Script Loading](Blender%20Scripting/Headless%20Rendering/Script%20loading.md)
+- [Using Command Line Arguments](Blender%20Scripting/Headless%20Rendering/Using%20command%20line%20arguments.md)
+#### Configurations
+Discussion of the process for generating millions of different car combinations
 
-- [Table of Contents](W&S%20-%20Blender%20scripting%20documentation.md)
 
-- 🎨 Material combinations and customization
-- 🧠 Scripted workflows and automation
-- 💻 Headless rendering and performance tuning
-- 🗂️ File structure and asset organization
+- [Combinations Rendering](Blender%20Scripting/Configurations/Combinations%20Rendering.md)
+- [Configurations Generation](Blender%20Scripting/Configurations/Configurations%20Generation.md)
+#### Scripting
+Script explanation
 
+
+- [Getting Started](Blender%20Scripting/Scripting/Getting%20started.md)
+- [Files](Blender%20Scripting/Scripting/Scripting/Files.md)
+- [Helpers](Blender%20Scripting/Scripting/Scripting/Helpers.md)
+- [Blender to Script](Blender%20Scripting/Scripting/Blender%20to%20Script.md)
+- [Environment Rendering](Blender%20Scripting/Scripting/Environment%20Rendering.md)
+- [Render Settings](Blender%20Scripting/Render%20Settings.md)
+- [File Structure](Blender%20Scripting/File%20Structure.md)
+- [Memory Probing](Blender%20Scripting/Memory%20Probing.md)

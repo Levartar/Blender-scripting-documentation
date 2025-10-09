@@ -1,7 +1,9 @@
-This program is not memory safe for different reasons.
+!This Article is a Stump
+
+Considerations if your computer can't run the script
 
 - Blender files are loaded and are massive rendering these requires at least 32gb ram or 8gbvram
-- Blender Files are not cleane up properly on runtime
+- Blender Files are not cleaned up properly on runtime
 - Python generates too many combinations
 
 ## Blender Files

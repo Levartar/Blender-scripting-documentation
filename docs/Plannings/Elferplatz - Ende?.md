@@ -1,9 +1,10 @@
+!This Article is a Stump
 
 Die Software Elferplatz ist ein Personalisierter Autogenerator für reiche Porscheliebhaber. Das Projekt ist 6 Monate nach der Deadline immer noch nicht fertig und damit eine Finanzielle Vollkatastrophe
 
 # Was nun
 ## Weitermachen
-Sunk kost fallacy aber das Projekt soll noch irgendwie fertig werden.
+Sunk cost fallacy aber das Projekt soll noch irgendwie fertig werden.
 - Weitere Kosten entstehen
 - Elferplatz fertig
 

@@ -19,10 +19,11 @@ In this script the Arguments are called via command line are explained here.
 | Argument         | Explanation                                                                                                   |
 | ---------------- | ------------------------------------------------------------------------------------------------------------- |
 | `test`           | no pictures are rendered only file paths are logged                                                           |
-| `minimum`        | only first picture for every camera is rendered                                                               |
+| `min`        | only first picture for every camera is rendered                                                               |
 | `pre`            | renders are in low resolution                                                                                 |
 | `test-rend`      | renders pictures in human readable file paths<br>- `script-name`<br>  - `layer-1`<br>  - `layer-2`<br>  - ... |
-| `--v <v-number>` | sets the Version number of the blocker files                                                                  |
+| `--v <v-number>` | sets the Version number of the blocker files |
+| `--res <width>x<height>` | sets the resolution pixel size |
 
 
 ## Script Examples
