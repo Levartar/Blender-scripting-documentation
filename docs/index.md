@@ -1,14 +1,11 @@
-# 🚗 Elferplatz car rendering for W&S
+# Elferplatz car rendering for W&S
 
 This is a documentation for w&s about the  Elferplatz python script.
 
 ## 📚 Table of Contents
 
-### Blender Scripting
-
 #### Headless Rendering
 Start here if you need to know how to setup Blender to be able to run the script out of your command line
-
 
 - [Headless Rendering](Blender%20Scripting/Headless%20Rendering/Headless%20Rendering.md)
 - [Script Loading](Blender%20Scripting/Headless%20Rendering/Script%20loading.md)
@@ -16,12 +13,10 @@ Start here if you need to know how to setup Blender to be able to run the script
 #### Configurations
 Discussion of the process for generating millions of different car combinations
 
-
 - [Combinations Rendering](Blender%20Scripting/Configurations/Combinations%20Rendering.md)
 - [Configurations Generation](Blender%20Scripting/Configurations/Configurations%20Generation.md)
 #### Scripting
 Script explanation
-
 
 - [Getting Started](Blender%20Scripting/Scripting/Getting%20started.md)
 - [Files](Blender%20Scripting/Scripting/Scripting/Files.md)

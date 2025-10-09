@@ -2,13 +2,12 @@
 This allows us to use Blender from the command-line. Headless means no blender ui is opened and all commands to the blend file have to be made through command-line commands which are explained here
 
 ### Need:
-Comand Line Blender Launch:
-https://docs.blender.org/manual/en/latest/advanced/command_line/launch/index.html#command-line-launch-index
+Setting up the `blender`command line command: [https://docs.blender.org/manual/en/latest/advanced/command_line/launch/index.html#command-line-launch-index](https://docs.blender.org/manual/en/latest/advanced/command_line/launch/index.html#command-line-launch-index)
 
-### Blender Terminal Rendering Command:
-https://docs.blender.org/manual/en/latest/advanced/command_line/render.html
+Running blender via command line: [https://docs.blender.org/manual/en/latest/advanced/command_line/render.html](https://docs.blender.org/manual/en/latest/advanced/command_line/render.html)
 
-min usable:
+## Blender Command line Arguments
+A common blender command line call can look like the following. 
 ```
 blender -b file.blend -f 10
 ```
@@ -21,7 +20,7 @@ blender -b file.blend -f 10
 -  `-f 10`
 	-  render the 10th frame (required!)
 
-render to specific output path:
+If you want to render to a specific output path you have to add the path to the terminal command like the following.
 ``` Terminal
 blender -b Documents/Blender/headless_test/cube1.blend -o Documents/Blender/Renders/frame_##### -E CYCLES -f 10
 ```
@@ -32,35 +31,34 @@ blender -b Documents/Blender/headless_test/cube1.blend -o Documents/Blender/Rend
 -  `-E CYCLES`
 	- Sets the render engine to cycles. Default is what the file is using
 
-Headless Script Loading
+When you want to load a script that runs with the Blender file you have to add it to the command like the following.
 ```Terminal
 blender -b "$BLEND_FILE" -P "$SCRIPT_FILE"
 ```
 
 ### Headless Example:
-Elferplatz script Headless rendering Usage:
-
-Basic call: Renders in full Size
+In our case we want to render our images with a script that starts the renderings, switches configurations and then renders the next image. Our basic render call looks like the following:
 ```
 blender -b <path-to-.blend> -P <path-to-script> 
 ```
-Options:
-Options are added at the end of the Terminal call
+Our script has optional arguments that work like Blenders optional arguments. These options are added at the end of the Terminal call. 
+
 - `test` no pictures are rendered only file paths are logged and amount of files are counted
 - `test-rend` renders pictures in human viewable format
 - `min` only first picture for every camera is rendered
 - `pre` renders are in low resolution
 
-Example calls
+To test if the script is working clone the remote: `git clone https://<your-name>@bitbucket.org/weiseundstark/ansible-server-management.git`. Then put the newest 964 Blender file into the blender_files folder you just cloned. Then you can run these commands from your Visual Studio Code Terminal or from your own Terminal at `cd ansible-server-management`.
+
 964_ext: Renders in TEST_MODE
 ```Terminal
-blender -b Documents/mass-rend-test/964_ext_206.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_ext.py test
+blender -b roles/blender_scripting/blender_files/964_ext_206.blend -P roles/blender_scripting/files/964_ext.py test
 ```
 964_int: Renders in MINIMUM_MODE + PREVIEW_MODE
 ```Terminal
-blender -b Documents/mass-rend-test/964_int_173.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_int.py min test
+blender -b roles/blender_scripting/blender_files/964_int_173.blend -P roles/blender_scripting/files/964_int.py min test
 ```
 g_ext_early: Renders in MINIMUM_MODE + PREVIEW_MODE
 ```Terminal
-blender -b Documents/mass-rend-test/g_ext_31.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/g_ext_early.py test min
+blender -b roles/blender_scripting/blender_files/g_ext_31.blend -P roles/blender_scripting/files/g_ext_early.py test min
 ```

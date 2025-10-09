@@ -18,6 +18,7 @@ Modifying the datapath value:
 - `path = 'bpy.data.objects["Car_LightsBack"].modifiers["GeometryNodes"]["Socket_6"]'`
 - `key = '1'` # String value that the geo node can take
 - `path = key`
+
 If anything is wrong within blender silently fails. This means the program still runs but doesn't change any blender values. When rendering this is particularly annoying as you only see if it worked after a few images rendered.
 
 ## Materials
@@ -37,6 +38,7 @@ Modifying the datapath value:
 - `path = 'bpy.data.node_groups["COLORGOD"].nodes["LACKFARBE"].outputs[0].default_value'`
 - `key = (r, g, b, alpha)` # rgb value that the material node can take
 - `path = key`
+
 If anything is wrong within blender silently fails. This means the program still runs but doesn't change any blender values. When rendering this is particularly annoying as you only see if it worked after a few images rendered.
 
 ## Layers
