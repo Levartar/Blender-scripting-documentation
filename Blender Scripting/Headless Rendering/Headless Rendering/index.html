@@ -990,23 +990,22 @@
 <p>In our case we want to render our images with a script that starts the renderings, switches configurations and then renders the next image. Our basic render call looks like the following:</p>
 <pre><code>blender -b &lt;path-to-.blend&gt; -P &lt;path-to-script&gt; 
 </code></pre>
-<p>Options:
-Options are added at the end of the Terminal call</p>
+<p>Our script has optional arguments that work like Blenders optional arguments. These options are added at the end of the Terminal call. </p>
 <ul>
 <li><code>test</code> no pictures are rendered only file paths are logged and amount of files are counted</li>
 <li><code>test-rend</code> renders pictures in human viewable format</li>
 <li><code>min</code> only first picture for every camera is rendered</li>
 <li><code>pre</code> renders are in low resolution</li>
 </ul>
-<p>Example calls
-964_ext: Renders in TEST_MODE</p>
-<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/964_ext_206.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_ext.py test
+<p>To test if the script is working clone the remote: <code>git clone https://&lt;your-name&gt;@bitbucket.org/weiseundstark/ansible-server-management.git</code>. Then put the newest 964 Blender file into the blender_files folder you just cloned. Then you can run these commands from your Visual Studio Code Terminal or from your own Terminal at <code>cd ansible-server-management</code>.</p>
+<p>964_ext: Renders in TEST_MODE</p>
+<pre><code class="language-Terminal">blender -b roles/blender_scripting/blender_files/964_ext_206.blend -P roles/blender_scripting/files/964_ext.py test
 </code></pre>
 <p>964_int: Renders in MINIMUM_MODE + PREVIEW_MODE</p>
-<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/964_int_173.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/964_int.py min test
+<pre><code class="language-Terminal">blender -b roles/blender_scripting/blender_files/964_int_173.blend -P roles/blender_scripting/files/964_int.py min test
 </code></pre>
 <p>g_ext_early: Renders in MINIMUM_MODE + PREVIEW_MODE</p>
-<pre><code class="language-Terminal">blender -b Documents/mass-rend-test/g_ext_31.blend -P Documents/w-s/ansible-server-management/roles/blender_scripting/files/g_ext_early.py test min
+<pre><code class="language-Terminal">blender -b roles/blender_scripting/blender_files/g_ext_31.blend -P roles/blender_scripting/files/g_ext_early.py test min
 </code></pre>
 
 
