@@ -966,7 +966,7 @@
 </ul>
 </li>
 </ul>
-<p>render to specific output path:</p>
+<p>If you want to render to a specific output path you have to add the path to the terminal command like the following.</p>
 <pre><code class="language-Terminal">blender -b Documents/Blender/headless_test/cube1.blend -o Documents/Blender/Renders/frame_##### -E CYCLES -f 10
 </code></pre>
 <ul>
@@ -983,12 +983,11 @@
 </ul>
 </li>
 </ul>
-<p>Headless Script Loading</p>
+<p>When you want to load a script that runs with the Blender file you have to add it to the command like the following.</p>
 <pre><code class="language-Terminal">blender -b &quot;$BLEND_FILE&quot; -P &quot;$SCRIPT_FILE&quot;
 </code></pre>
 <h3 id="headless-example">Headless Example:</h3>
-<p>Elferplatz script Headless rendering Usage:</p>
-<p>Basic call: Renders in full Size</p>
+<p>In our case we want to render our images with a script that starts the renderings, switches configurations and then renders the next image. Our basic render call looks like the following:</p>
 <pre><code>blender -b &lt;path-to-.blend&gt; -P &lt;path-to-script&gt; 
 </code></pre>
 <p>Options:
