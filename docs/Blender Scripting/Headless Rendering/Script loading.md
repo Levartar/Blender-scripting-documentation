@@ -17,7 +17,7 @@ blender -b  cube.blend -P scripts/mainscript.py
 mainscript.py imports importscript.py for helperfunctions.
 
 ### The Problem
-Opening mainscript.py in the Blender scripting editor and running it throws an error because Python cant find the file. To solve this a switch has to be added to the code that recognises both methods of launching the script.
+Opening mainscript.py in the Blender scripting editor and running it throws an error because Python cant find the file. To solve this a switch has to be added to the code that recognizes both methods of launching the script.
 
 ## Multiplatform script loading solution
 ```Python

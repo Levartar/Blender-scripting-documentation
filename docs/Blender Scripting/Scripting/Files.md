@@ -1,6 +1,6 @@
 # Files
 
-This folder consists of different scripts that individually run all configurations for a specific car exterieur and interieur.
+This folder consists of different scripts that individually run all configurations for a specific car exterior and interior.
 
 
 ## Scripts Overview
@@ -90,19 +90,19 @@ def <name>():
 
 
 ### 964_ext.py
-964 exterieur script used with 964_ext_***.blend. Main file with newest changes. All other files are only a copied version of 964_ext with adjusted vars.
+964 exterior script used with 964_ext_***.blend. Main file with newest changes. All other files are only a copied version of 964_ext with adjusted vars.
 
 ### 964_int.py
-964 interieur script used with 964_int_***.blend.
+964 interior script used with 964_int_***.blend.
 
 ### f_ext.py
-F model exterieur script f_ext_***.blend.
+F model exterior script f_ext_***.blend.
 
 ### f_int.py
-F model interieur script used with f_int_***.blend.
+F model interior script used with f_int_***.blend.
 
 ### g_ext.py
-G model exterieur script g_ext_***.blend.
+G model exterior script g_ext_***.blend.
 
 ### g_int.py
-G model interieur script used with g_int_***.blend.
+G model interior script used with g_int_***.blend.

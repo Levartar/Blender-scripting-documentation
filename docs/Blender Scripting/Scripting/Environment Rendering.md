@@ -4,7 +4,7 @@ This is only a discussion of how environments (blender geometry environment othe
 - Background should contain detailed 3D scene
 - Background should be interchangeable
 - Sweet Spot Cameras only
-- Personalised Car should be inside the Environment
+- Personalized Car should be inside the Environment
 - Lighting should be realistic
 
 ## Implementation

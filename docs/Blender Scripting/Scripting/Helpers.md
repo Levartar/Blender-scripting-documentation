@@ -2,7 +2,7 @@
 Files that are universally used and hold the main code and configurations for the Blender file
 
 ### Cloud Config
-Contains Cloud Configurations. As this Docu is public im not talking about the content see for yourself!
+Contains Cloud Configurations. As this Documentation is public im not talking about the content see for yourself!
 
 ### Cloud Helpers
 Contains functions to interact with the cloud.
